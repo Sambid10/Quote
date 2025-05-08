@@ -1,6 +1,6 @@
 const quotesData = {
     inspire: [
-      { quote: "Believe in yourself.", author: "Unknown" },
+      { quote: "Believe in yourself.", author: "Confucius" },
       { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
       { quote: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
       { quote: "Success is not the key to happiness. Happiness is the key to success.", author: "Albert Schweitzer" }
@@ -17,7 +17,13 @@ const quotesData = {
       { quote: "The science of today is the technology of tomorrow.", author: "Edward Teller" },
       { quote: "In science, there are no shortcuts to truth.", author: "Karl Popper" }
     ],
-};
+    math: [
+      { quote: "Pure mathematics is, in its way, the poetry of logical ideas.", author: "Albert Einstein" },
+      { quote: "Mathematics is the most beautiful and most powerful creation of the human spirit.", author: "Stefan Banach" },
+      { quote: "Without mathematics, there’s nothing you can do. Everything around you is mathematics.", author: "Shakuntala Devi" },
+      { quote: "Go down deep enough into anything and you will find mathematics.", author: "Dean Schlicter" }
+    ]
+  };
 
 let currentCategory = "inspire";  // Initial load inspire will be selected
 let currentIndex = 0;  //Initial load index=0 
@@ -72,9 +78,11 @@ document.getElementById("random-btn").addEventListener("click",function(){
 
 //change font size
 const txt = document.getElementById("quote-txt");
+const authortxt=document.getElementById("quoteauth")
 const range=document.getElementById("font-changer")
 range.addEventListener('input',function(){
     const rangevalue=range.value
     txt.style.fontSize=rangevalue + "px"
+    
 })
 

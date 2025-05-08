@@ -8,9 +8,25 @@
 body{
     position: relative;
 }
+:root{
+    --base-color:white;
+    --accent-color:#27548A;
+    --secondary-color:#e5e5e5;
+    --shadow-color:gray;
+    --text-color:#121212;
+    --secondary-text-color:#333
+}
+.darkmode{
+    --base-color:#070b1d;
+    --accent-color:#27548A;
+    --secondary-color:#070b1d;
+    --shadow-color:gray;
+    --text-color:#e5e5e5;
+    --secondary-text-color:#aeadad;
+}
 
 .main{
-    background-color: white;
+    background-color: var(--base-color);
     height: 100vh;
     display: flex;
     position: relative;
@@ -36,6 +52,7 @@ footer-right-wrapper{
 
 
 .main-container {
+    color: var(--text-color);
     display: flex;
     flex-direction: column; 
     width: 45vw;
@@ -45,30 +62,113 @@ footer-right-wrapper{
     padding-left: 24px;
     padding-right: 24px;
     border-radius: 10px;
-    background-color: #e5e5e5;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border: 1px solid;
+    border-color: var(--shadow-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 4px var(--shadow-color);
 }
 
+@media screen and (max-width: 640px) {
+    .title{
+        font-size: 25px;
+    }
+    .main-container{
+        width: 80vw;
+        height: 70vh;
+        overflow-y: scroll;
+    }
+    #quote-auth{
+        font-size: 15px;
+    }
+    #quote-txt{
+        font-size:22px;
+    }
+    .category-select{
+        font-size: 12px;
+        height: 35px;
+        width: 100px;
+    }
+    .font-label{
+        font-size: 15px;
+    }
+    .category-label{
+        font-size: 15px;
+    }
+    .btn{
+        height: 35px;
+        width: 100px;
+        font-size: 13px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+  }
+  @media screen and (min-width: 641px) and (max-width: 1024px) {
+    .title{
+        font-size: 35px;
+    }
+    #quote-txt{
+        font-size:30px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    #quote-auth{
+        font-size: 17px;
+    }
+    .main-container{
+        width: 70vw;
+        height: 75vh;
+        overflow-y: scroll;
+    }
+   
+    .btn{
+        height: 40px;
+        width: 120px;
+        font-size: 13px;
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    .main-container{
+        width: 50vw;
+        height: 60vh;
+        overflow-y: scroll;
+    }
+    #quote-auth{
+        font-size: 18px;
+    }
+    .btn{
+        height: 40px;
+        width: 120px;
+        font-size: 15px;
+    }
+  }
 .quote-contain {
     flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center; 
-    color: black;
     text-align: center;
-    
 }
 #quote-auth{
     text-align: end;
-    font-size: 20px;
     font-style: italic;
-    color: #333;
+   color: var(--secondary-text-color);
     margin-top: 5px;
+    font-weight: normal;
 }
 #quote-txt{
-    font-size: 30px;
+    
+    font-weight: normal;
+    white-space: normal;          
+    overflow-wrap: break-word;     
+    word-break: break-word;        
+    text-wrap: pretty;  
 }
-
 
 .footer {
     border-top: 1px solid gray;
@@ -79,19 +179,35 @@ footer-right-wrapper{
     display: flex;
     justify-content: space-between;
 }
+.footer-left-wrapper{
+    display: flex;
+    flex-direction: column ;
+    align-items: start;
+  
+    width: 100%;
+    gap: 12px
+}
+.footer-right-wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: column ;
+    align-items: center; 
+    gap: 12px
+}
+.font-label{
+    margin-right: 4px;
+}
+.category-label{
+    margin-right: 4px;
+}
 .category-select{
     background-color: #e5e5e5;
-    height: 42px;
-    width: 120px;
     border-radius: 5px;
     padding: 2px;
-    font-size: 15px;
+   
 }
 .btn{
-    background-color:#27548A;
-     height: 42px;
-     width: 120px;
-     font-size: 15px;
+    background-color:var(--accent-color);
      border-radius: 50px;
      color: white;
      border: none;
@@ -107,7 +223,16 @@ footer-right-wrapper{
 }
 .title{
     text-align: center;
-    color: #121212;
-    font-size: 2.4rem;
-    
+   
+}
+.font-container{
+    display: flex;
+    align-items: center;
+}
+.theme-select{
+    font-weight: 600;
+    color: var(--text-color)
+}
+::-webkit-scrollbar {
+    display: none;
 }
