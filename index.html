@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote Generator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quote Generator</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="main">
-    
     <div class="main-container">
         <h1 class="title">QUOTE GENERATOR </h1>
-        <div id="quote_contain">
-       
+        <div id="quote-txt">
+      
+        </div>
+        <div id="quote-auth">
+
         </div>
         <div class="footer">
-            <div class="btn-wrapper">
-                <button id="fetchbtn" class="btn">
-                    New Quote +
-                </button>
-            </div>
-           
+            <div>
+                <select id="category-select" class="category-select">
+                    <option value="inspire">Inspire</option>
+                    <option value="success">Success</option>
+                    <option value="science">Science</option>
+                </select>
+
+            </div>   
         </div>
     </div>
-    
+    <div class="dark-mode-container">
+        <select class="select">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+        </select>
+    </div>
+</body>
+
+ 
+  <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
