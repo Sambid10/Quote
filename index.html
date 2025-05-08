@@ -9,21 +9,41 @@
 <body class="main">
     <div class="main-container">
         <h1 class="title">QUOTE GENERATOR </h1>
-        <div id="quote-txt">
+        <div class="quote-contain">
+            <div id="quote-txt">
+            </div>
+            <div id="quote-auth">
+            </div>
+        </div>
       
-        </div>
-        <div id="quote-auth">
-
-        </div>
         <div class="footer">
+            <div class="footer-right-wrapper">
+                <div>
+                    <select id="category-select" class="category-select">
+                        <option value="inspire">Inspire</option>
+                        <option value="success">Success</option>
+                        <option value="science">Science</option>
+                    </select>
+                    <button id="random-btn" class="btn">Random</button> 
+                    <div>
+                        <input 
+                        id="font-changer"
+                        min="20"
+                        max="45"
+                       value="30"
+                        type="range" />
+                    </div>  
+                </div> 
+               
+            </div>
             <div>
-                <select id="category-select" class="category-select">
-                    <option value="inspire">Inspire</option>
-                    <option value="success">Success</option>
-                    <option value="science">Science</option>
-                </select>
-
-            </div>   
+                <div>
+                 
+                 <button id="decrement-btn" class="btn">Previous</button> 
+                 <button id="increment-btn" class="btn">Next</button> 
+                </div>
+             </div>
+              
         </div>
     </div>
     <div class="dark-mode-container">
